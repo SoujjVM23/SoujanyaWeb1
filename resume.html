@@ -32,13 +32,17 @@
         margin-bottom: 25px;
     }
 
-    textarea, input {
+    textarea {
         width: 100%;
-        padding: 10px;
-        margin-top: 8px;
-        border-radius: 8px;
+        font-size: 16px;
+        line-height: 22px;
         border: 1px solid #ccc;
-        font-size: 15px;
+        border-radius: 8px;
+        padding: 10px;
+        resize: none;
+        overflow: hidden;
+        min-height: 60px;
+        box-sizing: border-box;
     }
 
     /* Download Button */
@@ -58,6 +62,16 @@
         background: #0056b3;
     }
 
+    .back-btn {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
 </style>
 
 </head>
@@ -67,48 +81,48 @@
 
     <h2>Profile Summary</h2>
     <div class="section">
-        <textarea placeholder="I am a Computer Science Engineering student with knowledge of computer,programming languages.I want to learn skills about new technologies."></textarea>
+        <textarea oninput="autoResize(this)" placeholder="I am a Computer Science Engineering student with knowledge of computers and programming languages. I want to learn skills about new technologies."></textarea>
     </div>
 
     <h2>Skills</h2>
     <div class="section">
-        <textarea placeholder="Basics of programming language,Typing skills,Basics of excel,Computer knowlegde"></textarea>
+        <textarea oninput="autoResize(this)" placeholder="Basics of programming languages, typing skills, basics of Excel, computer knowledge."></textarea>
     </div>
 
     <h2>Experience</h2>
     <div class="section">
-        <textarea placeholder="Fresher"></textarea>
+        <textarea oninput="autoResize(this)" placeholder="Fresher"></textarea>
     </div>
 
     <h2>Education</h2>
     <div class="section">
-        <textarea placeholder="Bachelor of Computer science and engineering"></textarea>
+        <textarea oninput="autoResize(this)" placeholder="Bachelor of Computer Science and Engineering"></textarea>
     </div>
 
     <h2>Languages</h2>
     <div class="section">
-        <textarea placeholder="kannada,English,Hindi"></textarea>
+        <textarea oninput="autoResize(this)" placeholder="Kannada, English, Hindi"></textarea>
     </div>
 
     <!-- Download Resume Button -->
     <button class="download-btn" onclick="window.print()">Download Resume</button>
-	<div style="text-align:center; margin-top:20px;">
-    <a href="index.html">
-        <button style="
-            padding:10px 20px;
-            background-color: #007bff;
-            color:white;
-            border:none;
-            border-radius:6px;
-            font-size:16px;
-            cursor:pointer;">
-            Back to Profile
-        </button>
-    </a>
-</div>
+
+    <!-- Back to Profile -->
+    <div style="text-align:center;">
+        <a href="index.html">
+            <button class="back-btn">Back to Profile</button>
+        </a>
+    </div>
 
 </div>
+
+<!-- Auto Grow Textarea Script -->
+<script>
+function autoResize(el) {
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+}
+</script>
 
 </body>
-
 </html>
