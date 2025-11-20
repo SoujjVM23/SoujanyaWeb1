@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 30px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: #007bff;
+        border-bottom: 2px solid #141417;
+        padding-bottom: 5px;
+    }
+
+    .section {
+        margin-bottom: 25px;
+    }
+
+    textarea, input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+
+    /* Download Button */
+    .download-btn {
+        width: 100%;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .download-btn:hover {
+        background: #0056b3;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Profile Summary</h2>
+    <div class="section">
+        <textarea placeholder="I am a Computer Science Engineering student with knowledge of computer,programming languages.I want to learn skills about new technologies and building simple projects that improve my skills"></textarea>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="section">
+        <textarea placeholder="Basics of programming language,Typing skills,Basics of excel,Computer knowlegde"></textarea>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="section">
+        <textarea placeholder="Fresher"></textarea>
+    </div>
+
+    <h2>Education</h2>
+    <div class="section">
+        <textarea placeholder="Bachelor of Computer science and engineering"></textarea>
+    </div>
+
+    <h2>Languages</h2>
+    <div class="section">
+        <textarea placeholder="kannada,English,Hindi"></textarea>
+    </div>
+
+    <!-- Download Resume Button -->
+    <button class="download-btn" onclick="window.print()">Download Resume</button>
+	<div style="text-align:center; margin-top:20px;">
+    <a href="index.html">
+        <button style="
+            padding:10px 20px;
+            background-color: #007bff;
+            color:white;
+            border:none;
+            border-radius:6px;
+            font-size:16px;
+            cursor:pointer;">
+            Back to Profile
+        </button>
+    </a>
+</div>
+
+</div>
+
+</body>
+</html>
