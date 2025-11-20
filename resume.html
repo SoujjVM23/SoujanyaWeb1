@@ -3,76 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume</title>
+<title>Resume Page</title>
 
 <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #f5f7fa;
         margin: 0;
         padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2; /* Grey theme */
     }
 
     .container {
-        max-width: 700px;
-        margin: 30px auto;
+        width: 85%;
+        max-width: 900px;
+        margin: 40px auto;
         background: white;
         padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.15);
     }
 
     h2 {
-        color: #007bff;
-        border-bottom: 2px solid #141417;
-        padding-bottom: 5px;
-    }
-
-    .section {
-        margin-bottom: 25px;
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 8px;
+        border-left: 4px solid #777;  /* Grey highlight */
+        padding-left: 10px;
     }
 
     textarea {
         width: 100%;
-        font-size: 16px;
-        line-height: 22px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
+        border: 1px solid #bbb;
         padding: 10px;
-        resize: none;
-        overflow: hidden;
-        min-height: 60px;
+        font-size: 16px;
+        border-radius: 8px;
+        background: #fafafa;
+        resize: none;        /* removes corner scroll */
+        overflow: hidden;    /* hides scrollbar */
+        min-height: 50px;
         box-sizing: border-box;
     }
 
-    /* Download Button */
-    .download-btn {
-        width: 100%;
-        background: #007bff;
-        color: white;
-        border: none;
-        padding: 12px;
-        border-radius: 8px;
-        font-size: 18px;
-        cursor: pointer;
-        margin-top: 20px;
+    textarea:focus {
+        outline: none;
+        border-color: #666;
+        background: #f0f0f0;
     }
 
-    .download-btn:hover {
-        background: #0056b3;
+    .btn-box {
+        text-align: center;
+        margin-top: 30px;
     }
 
-    .back-btn {
-        margin-top: 20px;
-        padding: 12px 20px;
-        background-color: #007bff;
-        color: white;
+    button {
+        padding: 12px 25px;
         border: none;
         border-radius: 8px;
+        background: #555;
+        color: white;
         font-size: 16px;
         cursor: pointer;
+        margin: 10px;
+    }
+
+    button:hover {
+        background: #333;
     }
 </style>
+
+<script>
+    // Auto expand textarea height
+    function autoGrow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight) + "px";
+    }
+</script>
 
 </head>
 <body>
@@ -80,49 +85,26 @@
 <div class="container">
 
     <h2>Profile Summary</h2>
-    <div class="section">
-        <textarea oninput="autoResize(this)" placeholder="I am a Computer Science Engineering student with knowledge of computers and programming languages. I want to learn skills about new technologies."></textarea>
-    </div>
+    <textarea oninput="autoGrow(this)">I am a Computer Science Engineering student with strong interest in programming, problem solving, and learning new technologies.</textarea>
 
     <h2>Skills</h2>
-    <div class="section">
-        <textarea oninput="autoResize(this)" placeholder="Basics of programming languages, typing skills, basics of Excel, computer knowledge."></textarea>
-    </div>
+    <textarea oninput="autoGrow(this)">Basic programming skills, Typing skills, Basics of Excel, Computer knowledge</textarea>
 
     <h2>Experience</h2>
-    <div class="section">
-        <textarea oninput="autoResize(this)" placeholder="Fresher"></textarea>
-    </div>
+    <textarea oninput="autoGrow(this)">Fresher</textarea>
 
     <h2>Education</h2>
-    <div class="section">
-        <textarea oninput="autoResize(this)" placeholder="Bachelor of Computer Science and Engineering"></textarea>
-    </div>
+    <textarea oninput="autoGrow(this)">Bachelor of Computer Science and Engineering</textarea>
 
     <h2>Languages</h2>
-    <div class="section">
-        <textarea oninput="autoResize(this)" placeholder="Kannada, English, Hindi"></textarea>
-    </div>
+    <textarea oninput="autoGrow(this)">English, Kannada, Hindi</textarea>
 
-    <!-- Download Resume Button -->
-    <button class="download-btn" onclick="window.print()">Download Resume</button>
-
-    <!-- Back to Profile -->
-    <div style="text-align:center;">
-        <a href="index.html">
-            <button class="back-btn">Back to Profile</button>
-        </a>
+    <div class="btn-box">
+        <button onclick="window.location.href='index.html'">Back to Profile</button>
+        <button onclick="window.print()">Download Resume</button>
     </div>
 
 </div>
-
-<!-- Auto Grow Textarea Script -->
-<script>
-function autoResize(el) {
-    el.style.height = "auto";
-    el.style.height = el.scrollHeight + "px";
-}
-</script>
 
 </body>
 </html>
